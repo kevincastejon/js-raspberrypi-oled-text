@@ -9,3 +9,4 @@ oled.on('ready', () => {
   oled.thirdLineScroll = 'auto';
   oled.thirdLine = 'Line 3 autoscroll';
 });
+oled.init();
