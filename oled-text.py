@@ -22,7 +22,7 @@ import sys
 import select
 import math
 import time
-
+import os
 import Adafruit_GPIO.SPI as SPI
 import Adafruit_SSD1306
 
@@ -30,6 +30,7 @@ from PIL import Image
 from PIL import ImageFont
 from PIL import ImageDraw
 
+os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
 # Raspberry Pi pin configuration:
 RST = 24
