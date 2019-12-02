@@ -11,6 +11,9 @@ const python = spawn('python', ['./oled-text.py']);
 class Oled extends events {
   constructor() {
     super();
+  }
+
+  init(){
     this._firstLine = '';
     this._secondLine = '';
     this._thirdLine = '';
@@ -45,7 +48,7 @@ class Oled extends events {
 
   set firstLineScroll(value) {
     this._firstLineScroll = value;
-    this._addCommand(1, value, scrollValues[this._firstLineScroll]);
+    this._addCommand(1, this._firstLine, scrollValues[this._firstLineScroll]);
   }
 
   get secondLineScroll() {
@@ -54,7 +57,7 @@ class Oled extends events {
 
   set secondLineScroll(value) {
     this._secondLineScroll = value;
-    this._addCommand(2, value, scrollValues[this._secondLineScroll]);
+    this._addCommand(2, this._secondLine, scrollValues[this._secondLineScroll]);
   }
 
   get thirdLineScroll() {
@@ -63,7 +66,7 @@ class Oled extends events {
 
   set thirdLineScroll(value) {
     this._thirdLineScroll = value;
-    this._addCommand(3, value, scrollValues[this._thirdLineScroll]);
+    this._addCommand(3, this._thirdLine, scrollValues[this._thirdLineScroll]);
   }
 
   get firstLine() {
