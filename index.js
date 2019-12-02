@@ -98,17 +98,17 @@ class Oled extends events {
 
   setFirstLine(text, scroll) {
     this._firstLineScroll = scroll;
-    this.firstLine(text);
+    this.firstLine = text;
   }
 
   setSecondLine(text, scroll) {
     this._secondLineScroll = scroll;
-    this.secondLine(text);
+    this.secondLine = text;
   }
 
   setThirdLine(text, scroll) {
     this._thirdLineScroll = scroll;
-    this.thirdLine(text);
+    this.thirdLine = text;
   }
 
   _addCommand(line, text, scroll) {
