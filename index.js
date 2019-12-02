@@ -9,10 +9,6 @@ const scrollValues = {
 const python = spawn('python', ['./oled-text.py']);
 
 class Oled extends events {
-  constructor() {
-    super();
-  }
-
   init(){
     this._firstLine = '';
     this._secondLine = '';

@@ -1,15 +1,15 @@
-# raspberry-oled-text
+# raspberrypi-oled-text
 
 Use three lines of scrollable text on OLED lcd from a Raspberry Pi
 
 ### Installation
 ```
-npm i raspberry-oled-text
+npm i raspberrypi-oled-text
 ```
 
 ### Basic Usage
 ```
-const Oled = require('raspberry-oled-text');
+const Oled = require('raspberrypi-oled-text');
 
 const oled = new Oled();
 oled.on('ready', () => {
