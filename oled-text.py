@@ -47,10 +47,10 @@ SPI_DEVICE = 0
 # SPI_DEVICE = 0
 
 # 128x32 display with hardware I2C:
-disp = Adafruit_SSD1306.SSD1306_128_32(rst=RST)
+# disp = Adafruit_SSD1306.SSD1306_128_32(rst=RST)
 
 # 128x64 display with hardware I2C:
-# disp = Adafruit_SSD1306.SSD1306_128_64(rst=RST)
+disp = Adafruit_SSD1306.SSD1306_128_64(rst=RST)
 
 # 128x32 display with hardware SPI:
 # disp = Adafruit_SSD1306.SSD1306_128_32(rst=RST, dc=DC, spi=SPI.SpiDev(SPI_PORT, SPI_DEVICE, max_speed_hz=8000000))
@@ -78,7 +78,7 @@ image = Image.new('1', (width, height))
 
 # Alternatively load a TTF font.  Make sure the .ttf font file is in the same directory as this python script!
 # Some nice fonts to try: http://www.dafont.com/bitmap.php
-font = ImageFont.truetype('VCR_OSD_MONO_1.001.ttf', 12)
+font = ImageFont.truetype('VCR_OSD_MONO_1.001.ttf', 18)
 
 # Create drawing object.
 draw = ImageDraw.Draw(image)
@@ -87,6 +87,8 @@ firstLine = ''
 secondLine = ''
 thirdLine = ''
 
+lineHeight = 18
+interline = 4
 # Animate text moving in sine wave.
 firstPos = 0
 secondPos = 0
@@ -151,7 +153,7 @@ while True:
                 x += char_width
                 continue
             # Draw text.
-            draw.text((x, 8+3), c, font=font, fill=255)
+            draw.text((x, lineHeight+interline), c, font=font, fill=255)
             # Increment x position based on chacacter width.
             char_width, char_height = draw.textsize(c, font=font)
             x += char_width
@@ -169,7 +171,7 @@ while True:
                 x += char_width
                 continue
             # Draw text.
-            draw.text((x, 16+3*2), c, font=font, fill=255)
+            draw.text((x, lineHeight*2+interline*2), c, font=font, fill=255)
             # Increment x position based on chacacter width.
             if thirdPos < -maxwidth:
                 thirdPos = width
