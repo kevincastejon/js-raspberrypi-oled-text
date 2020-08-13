@@ -6,7 +6,7 @@ const scrollValues = {
   off: '0',
   auto: 'A',
 };
-const python = spawn('python', [__dirname + '/oled-text.py']);
+const python = spawn('python3', [__dirname + '/oled-text.py']);
 
 class Oled extends events {
   init(){

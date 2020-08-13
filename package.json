@@ -1,10 +1,10 @@
 {
   "name": "raspberrypi-oled-text",
-  "version": "1.11.0",
+  "version": "1.12.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "preinstall": "sudo python -m pip install --upgrade pip setuptools wheel && sudo pip install Adafruit-SSD1306",
+    "preinstall": "sudo apt-get install python3-pip python3-pil python3-rpi.gpio -y && sudo pip3 install Adafruit-SSD1306 && sudo apt autoremove -y",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

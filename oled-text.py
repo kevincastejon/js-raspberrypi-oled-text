@@ -23,7 +23,7 @@ import select
 import math
 import time
 import os
-import Adafruit_GPIO.SPI as SPI
+# import Adafruit_GPIO.SPI as SPI
 import Adafruit_SSD1306
 
 from PIL import Image
