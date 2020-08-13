@@ -1,19 +1,32 @@
 {
-  "name": "raspberrypi-oled-text",
-  "version": "1.12.0",
-  "description": "",
+  "name": "js-raspberrypi-oled-text",
+  "version": "1.13.0",
+  "description": "Use three lines of scrollable text on OLED lcd from a Raspberry Pi",
   "main": "index.js",
   "scripts": {
     "preinstall": "sudo apt-get install python3-pip python3-pil python3-rpi.gpio -y && sudo pip3 install Adafruit-SSD1306 && sudo apt autoremove -y",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevincastejon/js-raspberrypi-oled-text.git"
+  },
+  "keywords": [
+    "oled",
+    "raspberry",
+    "pi",
+    "raspberrypi",
+    "lcd"
+  ],
   "devDependencies": {
     "eslint": "^6.7.2",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2"
-  }
+  },
+  "author": "kevincastejon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevincastejon/js-raspberrypi-oled-text/issues"
+  },
+  "homepage": "https://github.com/kevincastejon/js-raspberrypi-oled-text#readme"
 }
