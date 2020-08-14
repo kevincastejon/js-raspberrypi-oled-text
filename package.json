@@ -1,5 +1,5 @@
 {
-  "name": "js-raspberrypi-oled-text",
+  "name": "raspberrypi-oled-text",
   "version": "1.13.0",
   "description": "Use three lines of scrollable text on OLED lcd from a Raspberry Pi",
   "main": "index.js",
